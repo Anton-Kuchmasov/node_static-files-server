@@ -49,10 +49,10 @@ function createServer() {
 
         res.end(data);
       })
-      .catch((err) => {
+      .catch(() => {
         res.statusCode = 404;
 
-        res.end(err.message);
+        res.end('File not found!');
       });
   });
 
